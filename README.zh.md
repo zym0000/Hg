@@ -2,7 +2,9 @@
 
 [English](README.md) | [中文](README.zh.md)
 
-基于 ReAct 模式的异步 Python 编码 Agent 框架。通过 think → act → observe
+![Hg CLI 截图:deepseek-v4-flash 模型,可用 /help 与 /quit](image/show.png)
+
+基于 ReAct 模式的异步 Python  Agent 框架。通过 think → act → observe
 循环驱动 LLM,支持技能渐进披露、危险工具人工审批、上下文压缩、JSONL
 会话持久化与分叉。
 
@@ -19,14 +21,6 @@ python main.py                    # 启动交互式 CLI
 创建会话,注册内建工具,然后进入交互界面。
 
 多行输入:`Shift+Enter`(或 `Ctrl+J`)。
-
-## 核心特性
-
-- **ReAct 循环** — `IDLE → THINKING → PARSING → VALIDATING → ACTIVE → OBSERVING → APPROVAL_WAITING → FINISHED`,支持 cancel / abort 传播。
-- **内建工具** — `bash`、`read`、`write`、`edit`、`ls`、`find`、`grep`。
-- **技能渐进披露** — 非门控工具始终可见;门控工具在调用 `activate_skill` 后才出现。
-- **人工审批门** — 标记为 `dangerous=True` 的工具阻塞等待审批,超时视为拒绝。
-- **反振荡 watchdog** — 滑动窗口检测,提前打断工具调用死循环。
 
 ## 启动参数
 
@@ -56,7 +50,7 @@ python main.py                    # 启动交互式 CLI
 
 ## 配置
 
-编辑 `harness.yaml`:
+如果harness.yaml存在,编辑 `harness.yaml`:
 
 ```yaml
 llm:
