@@ -4,11 +4,6 @@
 
 ![Hg CLI: deepseek-v4-flash, /help and /quit available](image/show.png)
 
-Async Python ReAct-mode coding agent harness. Drives an LLM through a
-think → act → observe loop with progressive skill disclosure, human
-approval for dangerous tools, context compaction, and JSONL session
-persistence with branch forking.
-
 ## Quick Start
 
 ```bash

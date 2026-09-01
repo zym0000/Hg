@@ -4,10 +4,6 @@
 
 ![Hg CLI 截图:deepseek-v4-flash 模型,可用 /help 与 /quit](image/show.png)
 
-基于 ReAct 模式的异步 Python  Agent 框架。通过 think → act → observe
-循环驱动 LLM,支持技能渐进披露、危险工具人工审批、上下文压缩、JSONL
-会话持久化与分叉。
-
 ## 快速开始
 
 ```bash
