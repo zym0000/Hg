@@ -45,4 +45,5 @@ class AgentTool(Protocol):
         args: Any,
         signal: Any,
         on_update: Callable[[AgentToolResult], None] | None,
+        ctx: Any | None = None,
     ) -> AgentToolResult: ...
